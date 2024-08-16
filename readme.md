@@ -1,4 +1,8 @@
-# Zed for Windows
+# Download Directly 
+
+[Download Windows EXE](https://github.com/muhiris/Zed-For-Windows/releases/tag/v1.0)
+
+# Build From Source Install Zed for Windows
 
 Welcome! This guide provides clear steps to install the **Zed Code Editor**. The official documentation was difficult to follow, so I created this simplified version.
 
