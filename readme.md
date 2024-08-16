@@ -6,7 +6,7 @@ Welcome! This guide provides clear steps to install the **Zed Code Editor**. The
 
 1. **Download Rust Init** from:
 
-    [Download  rustup-init.exe  (64-bit)](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe)
+    [Download rustup-init.exe (64-bit)](https://static.rust-lang.org/rustup/dist/x86_64-pc-windows-msvc/rustup-init.exe)
 
 2. Open the downloaded **rustup-init.exe** file. When prompted, choose **1. Default Installation**.
 
@@ -18,19 +18,38 @@ Welcome! This guide provides clear steps to install the **Zed Code Editor**. The
 
     If you see information about the **rustup** command, the installation was successful.
 
-4. Clone the Zed repository:
+4. **Download and Install Build Tools**:
+
+    Download the Visual Studio Build Tools installer from:
+
+    [Download vs_BuildTools.exe](https://aka.ms/vs/17/release/vs_BuildTools.exe)
+
+    Run the installer and select the following components:
+    - **MSVC v143 - VS 2022 C++ x64/x86 build tools**
+    - **Windows 10 SDK (10.0.18362)**
+    - **C++ CMake tools for Windows**
+    
+    Complete the installation process.
+
+5. **Install the Windows SDK**:
+
+    Make sure you have at least `Windows 10 SDK version 2104 (10.0.20348.0)` installed. You can download the latest version of the Windows SDK from:
+
+    [Windows SDK Archive](https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/)
+
+6. **Clone the Zed repository**:
 
     ```bash
     git clone https://github.com/zed-industries/zed.git
     ```
 
-5. Navigate to the cloned folder:
+7. **Navigate to the cloned folder**:
 
     ```bash
     cd zed
     ```
 
-6. Run the application:
+8. **Run the application**:
 
     ```bash
     cargo run --release
@@ -42,17 +61,17 @@ Welcome! This guide provides clear steps to install the **Zed Code Editor**. The
 
 Ensure you have the following:
 
-- **Visual Studio**
+- **Visual Studio Build Tools** (or Visual Studio Community)
 - **GitHub CLI**
 - **rustup**
 
-Try following work around for any of these issues
- 
-    
+If you encounter build issues, try the following workarounds:
+
+1. Update Rust and add the WebAssembly target:
+
+    ```bash
     rustup update
     rustup target add wasm32-wasi
-    
+    ```
 
-Installing [Visual Studio Community](https://visualstudio.microsoft.com/downloads/) 
-
-Installing the Windows 11 or 10 SDK, ensuring at least `Windows 10 SDK version 2104 (10.0.20348.0)` is installed. Download it from the [Windows SDK Archive](https://developer.microsoft.com/windows/downloads/windows-sdk/).
+2. Verify your installation of the Windows SDK and ensure that the correct version is installed.
